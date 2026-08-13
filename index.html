@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>李建刚 - 个人主页</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="navbar" id="navbar">
+  <div class="nav-inner">
+    <span class="nav-brand" id="navBrand">李建刚</span>
+    <div class="nav-links" id="navLinks"></div>
+  </div>
+</nav>
+
+<!-- Hero -->
+<header class="hero">
+  <div class="hero-bg">
+    <div class="glow glow-1"></div>
+    <div class="glow glow-2"></div>
+    <div class="glow glow-3"></div>
+  </div>
+  <div class="hero-content">
+    <div class="avatar reveal" id="avatarBox">
+      <span id="avatarText">李</span>
+      <img id="avatarImg" alt="头像" hidden>
+    </div>
+    <h1 class="hero-title reveal" id="heroTitle">李建刚</h1>
+    <p class="hero-role reveal" id="heroRole"></p>
+    <p class="hero-intro reveal" id="heroIntro"></p>
+    <div class="hero-scroll reveal">
+      <div class="mouse"><div class="wheel"></div></div>
+    </div>
+  </div>
+</header>
+
+<main class="container">
+
+  <!-- 个人简介 -->
+  <section class="section" id="profile">
+    <h2 class="section-title reveal">个人简介</h2>
+    <div class="glass-card card-text reveal" id="profileText"></div>
+  </section>
+
+  <!-- 荣誉 -->
+  <section class="section" id="honors">
+    <h2 class="section-title reveal">荣誉奖项</h2>
+    <div class="honor-grid" id="honorGrid"></div>
+  </section>
+
+  <!-- 联系方式 -->
+  <section class="section" id="contact">
+    <h2 class="section-title reveal">联系方式</h2>
+    <div class="glass-card contact-card reveal" id="contactCard"></div>
+  </section>
+
+  <!-- 代表性论文 -->
+  <section class="section" id="papers">
+    <h2 class="section-title reveal">代表性论文</h2>
+    <div class="paper-list" id="paperList"></div>
+  </section>
+
+  <!-- 科研项目 -->
+  <section class="section" id="projects">
+    <h2 class="section-title reveal">科研项目</h2>
+    <div class="project-list" id="projectList"></div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <p id="footerText">李建刚 · 个人主页</p>
+  </div>
+</footer>
+
+<script src="data.js"></script>
+<script src="render.js"></script>
+</body>
+</html>
