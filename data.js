@@ -123,24 +123,10 @@ const PROFILE_DATA = {
       status: "主持"
     },
     {
-      name: "河南省科技攻关项目",
-      number: "242102320231",
-      fund: "0",
-      time: "2024.01 - 2025.12",
-      status: "主持"
-    },
-    {
       name: "博士科研启动资助项目",
       number: "800895",
       fund: "10 万元",
       time: "2024.01 - 2026.12",
-      status: "主持"
-    },
-    {
-      name: "教学改革项目",
-      number: "PX-27241012",
-      fund: "0",
-      time: "2024.03 - 2026.02",
       status: "主持"
     },
     {
