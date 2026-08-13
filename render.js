@@ -82,11 +82,11 @@
 
   // 论文
   const paperList = document.getElementById("paperList");
-  D.papers.forEach(function (p) {
+  D.papers.forEach(function (p, i) {
     const el = document.createElement("div");
     el.className = "paper reveal" + (p.highlight ? " paper-highlight" : "");
     el.innerHTML =
-      '<div class="paper-authors">' + p.authors + "</div>" +
+      '<div class="paper-authors">' + String(i + 1).padStart(2, "0") + "　" + p.authors + "</div>" +
       '<div class="paper-title">' + p.title + "</div>" +
       '<div class="paper-meta">' +
       '<span class="paper-journal">' + p.journal + "</span>" +
@@ -116,7 +116,6 @@
   // 加入我们
   const R = D.recruiting;
   if (R) {
-    document.getElementById("recruitingTitle").textContent = R.title;
     document.getElementById("recruitSubtitle").textContent = R.subtitle;
     document.getElementById("recruitIntro").textContent = R.intro;
     const items = document.getElementById("recruitItems");
