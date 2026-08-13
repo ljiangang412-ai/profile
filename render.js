@@ -23,10 +23,10 @@
   // 导航链接
   const sections = [
     ["profile", "个人简介"],
-    ["honors", "荣誉奖项"],
-    ["contact", "联系方式"],
+    ["projects", "科研项目"],
     ["papers", "代表性论文"],
-    ["projects", "科研项目"]
+    ["honors", "荣誉奖项"],
+    ["contact", "联系方式"]
   ];
   const navLinks = document.getElementById("navLinks");
   sections.forEach(function (s) {
