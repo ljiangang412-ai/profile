@@ -268,6 +268,54 @@ body {
   border-color: rgba(52, 199, 89, 0.28);
 }
 
+/* ---------- 加入我们 ---------- */
+.recruit-card {
+  background: linear-gradient(150deg, rgba(41, 151, 255, 0.16), rgba(106, 92, 255, 0.14), rgba(255, 255, 255, 0.06));
+  border: 1px solid rgba(41, 151, 255, 0.28);
+  border-radius: var(--radius);
+  padding: 44px 46px;
+  text-align: center;
+}
+.recruit-subtitle {
+  font-size: clamp(20px, 2.8vw, 26px);
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+.recruit-intro {
+  font-size: 16px;
+  color: var(--text-secondary);
+  max-width: 640px;
+  margin: 0 auto;
+}
+.recruit-items {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 14px;
+  margin: 30px 0;
+  text-align: left;
+}
+.recruit-item {
+  background: rgba(0, 0, 0, 0.32);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-sm);
+  padding: 16px 20px;
+  font-size: 15px;
+  color: var(--text);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.recruit-check {
+  color: #7ee6a2;
+  font-weight: 700;
+  font-size: 17px;
+  flex: 0 0 auto;
+}
+.recruit-closing {
+  font-size: 16px;
+  color: var(--text-secondary);
+}
+
 /* ---------- 页脚 ---------- */
 .footer {
   margin-top: 110px;

@@ -26,7 +26,8 @@
     ["projects", "科研项目"],
     ["papers", "代表性论文"],
     ["honors", "荣誉奖项"],
-    ["contact", "联系方式"]
+    ["contact", "联系方式"],
+    ["recruiting", "加入我们"]
   ];
   const navLinks = document.getElementById("navLinks");
   sections.forEach(function (s) {
@@ -97,6 +98,24 @@
       '<div style="display:flex;flex-wrap:wrap;gap:8px;">' + tags + "</div>";
     projectList.appendChild(el);
   });
+
+  // 加入我们
+  const R = D.recruiting;
+  if (R) {
+    document.getElementById("recruitingTitle").textContent = R.title;
+    document.getElementById("recruitSubtitle").textContent = R.subtitle;
+    document.getElementById("recruitIntro").textContent = R.intro;
+    const items = document.getElementById("recruitItems");
+    R.items.forEach(function (it) {
+      const el = document.createElement("div");
+      el.className = "recruit-item";
+      el.innerHTML = '<span class="recruit-check">✓</span><span>' + it + "</span>";
+      items.appendChild(el);
+    });
+    document.getElementById("recruitClosing").textContent = R.closing;
+  } else {
+    document.getElementById("recruiting").style.display = "none";
+  }
 
   // 页脚
   document.getElementById("footerText").textContent =
