@@ -24,6 +24,7 @@
   const sections = [
     ["profile", "个人简介"],
     ["projects", "科研项目"],
+    ["positions", "科研兼职"],
     ["papers", "代表性论文"],
     ["honors", "荣誉奖项"],
     ["contact", "联系方式"],
@@ -45,6 +46,19 @@
     el.textContent = p;
     profileText.appendChild(el);
   });
+
+  // 科研兼职
+  const posGrid = document.getElementById("positionGrid");
+  if (D.positions && D.positions.length) {
+    D.positions.forEach(function (pos) {
+      const el = document.createElement("div");
+      el.className = "position-item reveal";
+      el.textContent = pos;
+      posGrid.appendChild(el);
+    });
+  } else {
+    document.getElementById("positions").style.display = "none";
+  }
 
   // 荣誉
   const honorGrid = document.getElementById("honorGrid");

@@ -174,6 +174,19 @@ body {
 .card-text { font-size: 16.5px; color: var(--text); text-align: justify; }
 .card-text p + p { margin-top: 14px; }
 
+/* ---------- 科研兼职 ---------- */
+.position-grid { display: flex; flex-direction: column; gap: 14px; }
+.position-item {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: var(--radius-sm);
+  padding: 20px 28px;
+  font-size: 15.5px;
+  color: var(--text-secondary);
+  transition: transform 0.35s ease, background 0.35s ease;
+}
+.position-item:hover { transform: translateY(-3px); background: var(--card-hover); color: var(--text); }
+
 /* ---------- 荣誉 ---------- */
 .honor-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 18px; }
 .honor-item {

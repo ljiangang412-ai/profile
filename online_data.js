@@ -17,19 +17,13 @@ const PROFILE_DATA = {
   name: "李建刚",
   role: "博士 · 博士后 · 讲师 · 硕士研究生导师",
   heroTitle: "李建刚",
-  heroIntro: "研究城镇化生态环境效应 · 国土空间开发与保护 · 城市更新",
+  heroIntro: "研究城镇化生态环境效应 · 国土空间开发与保护",
   avatar: "",
 
   profile:
-    "李建刚，博士，博士后，讲师，硕士研究生导师。\n" +
-    "承担《城乡生态与环境规划》《城市绿地系统规划》《自然地理学》《学年论文》等本科生课程教学工作。在国内外学术期刊上已发表论文 11 篇，参编《中国城市群地图集》学术著作一部。\n" ,
-
-  positions: [
-    "国家自然科学基金委通讯评审专家",
-    "河南省城乡空间数据挖掘院士工作站研究人员",
-    "中国地理学会会员",
-    "《Humanities & Social Sciences Communications》《Scientific Reports》《Environment, Development and Sustainability》《Discover Sustainability》《Networks and Spatial Economics》《Environmental Monitoring and Assessment》等 SSCI、SCI 期刊审稿人"
-  ],
+    "李建刚，博士，博士后，讲师，硕士研究生导师，国家自然科学基金委通讯评审专家，河南省城乡空间数据挖掘院士工作站研究人员，中国地理学会会员，《Humanities & Social Sciences Communications》《Scientific Reports》《Environment, Development and Sustainability》《Discover Sustainability》《Networks and Spatial Economics》《Environmental Monitoring and Assessment》等 SSCI、SCI 期刊审稿人。\n" +
+    "主要从事城镇化生态环境效应、国土空间开发和保护等方面的研究，承担《城乡生态与环境规划》《城市绿地系统规划》《自然地理学》《学年论文》等本科生课程教学工作。在国内外学术期刊上已发表论文 11 篇，参编《中国城市群地图集》学术著作一部。\n" +
+    "指导学生参加“新蚁族杯”第七届中国高校地理科学展示大赛获得三等奖；指导学生参加河南省第四届大学生土地国情调查大赛获得特等奖、一等奖和二等奖各 1 次，同时荣获优秀指导教师 2 次；指导学生参加 2023“印记中原”河南省大学生乡村设计大赛获得三等奖。在 2024 年河南省土地学会学术年会上所作的报告荣获一等奖。",
 
   contact: {
     email: ["lijiangang16@mails.ucas.ac.cn", "lijiangang2022@huel.edu.cn"],
