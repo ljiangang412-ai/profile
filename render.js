@@ -62,56 +62,72 @@
 
   // 荣誉
   const honorGrid = document.getElementById("honorGrid");
-  D.honors.forEach(function (h) {
-    const el = document.createElement("div");
-    el.className = "honor-item reveal";
-    el.textContent = h;
-    honorGrid.appendChild(el);
-  });
+  if (D.honors && D.honors.length) {
+    D.honors.forEach(function (h) {
+      const el = document.createElement("div");
+      el.className = "honor-item reveal";
+      el.textContent = h;
+      honorGrid.appendChild(el);
+    });
+  } else {
+    document.getElementById("honors").style.display = "none";
+  }
 
   // 联系方式
   const contactCard = document.getElementById("contactCard");
   const emails = D.contact.email.map(function (e) {
     return '<a href="mailto:' + e + '">' + e + "</a>";
   }).join("　");
-  contactCard.innerHTML =
+  let contactHtml =
     '<div class="contact-row"><span class="contact-label">邮箱</span>' +
-    '<span class="contact-value">' + emails + "</span></div>" +
-    '<div class="contact-row"><span class="contact-label">办公地址</span>' +
-    '<span class="contact-value">' + D.contact.office + "</span></div>";
+    '<span class="contact-value">' + emails + "</span></div>";
+  if (D.contact.office) {
+    contactHtml +=
+      '<div class="contact-row"><span class="contact-label">办公地址</span>' +
+      '<span class="contact-value">' + D.contact.office + "</span></div>";
+  }
+  contactCard.innerHTML = contactHtml;
 
   // 论文
   const paperList = document.getElementById("paperList");
-  D.papers.forEach(function (p, i) {
-    const el = document.createElement("div");
-    el.className = "paper reveal" + (p.highlight ? " paper-highlight" : "");
-    el.innerHTML =
-      '<div class="paper-authors">' + String(i + 1).padStart(2, "0") + "　" + p.authors + "</div>" +
-      '<div class="paper-title">' + p.title + "</div>" +
-      '<div class="paper-meta">' +
-      '<span class="paper-journal">' + p.journal + "</span>" +
-      '<span class="paper-year">' + p.year + "</span>" +
-      (p.detail ? '<span class="paper-year">' + p.detail + "</span>" : "") +
-      "</div>" +
-      (p.note ? '<div class="paper-note">' + p.note + "</div>" : "");
-    paperList.appendChild(el);
-  });
+  if (D.papers && D.papers.length) {
+    D.papers.forEach(function (p, i) {
+      const el = document.createElement("div");
+      el.className = "paper reveal" + (p.highlight ? " paper-highlight" : "");
+      el.innerHTML =
+        '<div class="paper-authors">' + String(i + 1).padStart(2, "0") + "　" + p.authors + "</div>" +
+        '<div class="paper-title">' + p.title + "</div>" +
+        '<div class="paper-meta">' +
+        '<span class="paper-journal">' + p.journal + "</span>" +
+        '<span class="paper-year">' + p.year + "</span>" +
+        (p.detail ? '<span class="paper-year">' + p.detail + "</span>" : "") +
+        "</div>" +
+        (p.note ? '<div class="paper-note">' + p.note + "</div>" : "");
+      paperList.appendChild(el);
+    });
+  } else {
+    document.getElementById("papers").style.display = "none";
+  }
 
   // 项目
   const projectList = document.getElementById("projectList");
-  D.projects.forEach(function (pr) {
-    const el = document.createElement("div");
-    el.className = "project reveal";
-    let tags = "";
-    if (pr.number) tags += '<span class="project-tag">' + pr.number + "</span>";
-    if (pr.fund) tags += '<span class="project-tag">' + pr.fund + "</span>";
-    if (pr.time) tags += '<span class="project-tag">' + pr.time + "</span>";
-    if (pr.status) tags += '<span class="project-tag status">' + pr.status + "</span>";
-    el.innerHTML =
-      '<div class="project-name">' + pr.name + "</div>" +
-      '<div style="display:flex;flex-wrap:wrap;gap:8px;">' + tags + "</div>";
-    projectList.appendChild(el);
-  });
+  if (D.projects && D.projects.length) {
+    D.projects.forEach(function (pr) {
+      const el = document.createElement("div");
+      el.className = "project reveal";
+      let tags = "";
+      if (pr.number) tags += '<span class="project-tag">' + pr.number + "</span>";
+      if (pr.fund) tags += '<span class="project-tag">' + pr.fund + "</span>";
+      if (pr.time) tags += '<span class="project-tag">' + pr.time + "</span>";
+      if (pr.status) tags += '<span class="project-tag status">' + pr.status + "</span>";
+      el.innerHTML =
+        '<div class="project-name">' + pr.name + "</div>" +
+        '<div style="display:flex;flex-wrap:wrap;gap:8px;">' + tags + "</div>";
+      projectList.appendChild(el);
+    });
+  } else {
+    document.getElementById("projects").style.display = "none";
+  }
 
   // 加入我们
   const R = D.recruiting;
