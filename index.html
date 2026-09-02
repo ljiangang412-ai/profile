@@ -3,88 +3,374 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>李建刚 - 个人主页</title>
+<title>李建刚 · Academic Homepage｜人工智能与城乡规划 · 城镇化与生态环境</title>
+<meta name="description" content="李建刚，博士、博士后，讲师，硕士研究生导师，河南财经政法大学。研究城镇化与生态环境、国土空间规划、城市更新、生态福祉，以及生成式人工智能、LLM、AI Agent、机器学习与 GIS 在城乡规划中的应用。">
+<meta name="theme-color" content="#0e1a2e">
+<meta property="og:title" content="李建刚 · Academic Homepage">
+<meta property="og:description" content="Urban & Spatial Research × Artificial Intelligence — 人工智能与城乡规划 · AI Planning · AI Ecosystem · AI City">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23101826'/%3E%3Crect x='7' y='7' width='8' height='8' fill='%23fff'/%3E%3Crect x='17' y='7' width='8' height='8' fill='%23fff'/%3E%3Crect x='7' y='17' width='8' height='8' fill='%23fff'/%3E%3Crect x='17' y='17' width='8' height='8' fill='%237d9fc4'/%3E%3C/svg%3E">
 <link rel="stylesheet" href="style.css">
+<script>document.documentElement.classList.add("js");</script>
 </head>
-<body>
+<body data-page="home">
 
-<nav class="navbar" id="navbar">
+<a class="skip" href="#main">跳到主要内容</a>
+
+<nav class="nav" id="nav" aria-label="主导航">
   <div class="nav-inner">
-    <span class="nav-brand" id="navBrand">李建刚</span>
+    <a class="nav-brand" href="index.html" aria-label="返回首页">
+      <span class="nav-mark" aria-hidden="true"></span>
+      <span class="nav-name" id="navName">李建刚</span>
+      <span class="nav-en" id="navEn">Li Jiangang</span>
+    </a>
     <div class="nav-links" id="navLinks"></div>
+    <div class="nav-right">
+      <span class="nav-lang" title="当前为中文版">中文</span>
+      <button class="nav-toggle" id="navToggle" type="button" aria-expanded="false" aria-controls="navLinks" aria-label="打开菜单">
+        <span></span><span></span>
+      </button>
+    </div>
   </div>
 </nav>
 
-<!-- Hero -->
-<header class="hero">
-  <div class="hero-content">
-    <div class="avatar reveal" id="avatarBox">
-      <span id="avatarText">李</span>
-      <img id="avatarImg" alt="头像" hidden>
+<main id="main">
+
+  <!-- 01 Hero -->
+  <header class="hero" id="top">
+    <div class="wrap hero-grid">
+      <div class="hero-text">
+        <p class="eyebrow reveal">
+          <span class="hide-sm">Academic Homepage</span><span class="dot hide-sm" aria-hidden="true"></span>
+          <span id="heroAffil">Henan University of Economics and Law</span>
+        </p>
+        <h1 class="hero-name reveal">
+          <span class="zh" id="heroName">李建刚</span>
+          <span class="en mono" id="heroNameEn">Li Jiangang</span>
+        </h1>
+        <p class="hero-role reveal" id="heroRole"></p>
+        <p class="hero-tagline reveal" id="heroTagline"></p>
+
+        <div class="hero-core reveal">
+          <span class="core-label mono" id="coreLabel"></span>
+          <h2 class="core-title" id="coreTitle"></h2>
+          <p class="core-sub mono" id="coreSub"></p>
+          <p class="core-desc" id="coreDesc"></p>
+        </div>
+
+        <div class="hero-actions reveal">
+          <a class="btn btn-primary" href="#research">查看科研成果</a>
+          <a class="btn btn-ghost" href="#join">加入课题组</a>
+          <a class="link-arrow" href="profile.html">完整个人学术简历 <span class="arrow" aria-hidden="true">→</span></a>
+        </div>
+      </div>
+
+      <figure class="hero-figure reveal">
+        <svg viewBox="0 0 560 560" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="figTitle figDesc">
+          <title id="figTitle">Spatial Intelligence 示意图</title>
+          <desc id="figDesc">抽象的城市网格、城市边界、空间网络与 AI 节点，表达人工智能与城市空间研究的交叉。</desc>
+          <defs>
+            <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+              <path d="M40 0H0V40" fill="none" stroke="currentColor" stroke-opacity="0.1" stroke-width="1"/>
+            </pattern>
+            <radialGradient id="fade" cx="50%" cy="50%" r="62%">
+              <stop offset="55%" stop-color="#fff" stop-opacity="1"/>
+              <stop offset="100%" stop-color="#fff" stop-opacity="0"/>
+            </radialGradient>
+            <mask id="fadeMask"><rect width="560" height="560" fill="url(#fade)"/></mask>
+          </defs>
+
+          <!-- 底层网格 -->
+          <rect width="560" height="560" fill="url(#grid)" mask="url(#fadeMask)"/>
+
+          <!-- 图框角标 -->
+          <g fill="none" stroke="currentColor" stroke-opacity="0.55" stroke-width="1">
+            <path d="M20 40V20H40"/><path d="M520 20H540V40"/><path d="M540 520V540H520"/><path d="M40 540H20V520"/>
+          </g>
+          <!-- 指北 -->
+          <g fill="none" stroke="currentColor" stroke-opacity="0.6" stroke-width="1">
+            <path d="M508 74V50"/><path d="M503 56l5-6 5 6"/>
+          </g>
+          <text x="508" y="90" font-family="ui-monospace, Menlo, Consolas, monospace" font-size="9" text-anchor="middle" fill="currentColor" fill-opacity="0.6">N</text>
+
+          <!-- 城市边界 -->
+          <path d="M118 150 L205 92 L315 104 L405 78 L474 152 L452 262 L484 362 L418 444 L300 474 L198 450 L118 384 L86 270 Z"
+                fill="#2f5d8c" fill-opacity="0.05" stroke="currentColor" stroke-width="1.2" stroke-dasharray="6 5" stroke-linejoin="round"/>
+
+          <!-- 数据点 -->
+          <path d="M216 139h0 M344 108h0 M113 278h0 M105 249h0 M256 402h0 M138 167h0 M335 450h0 M425 193h0 M210 398h0 M160 307h0 M304 104h0 M267 197h0 M400 353h0 M185 304h0 M295 421h0 M374 192h0 M253 375h0 M149 271h0 M388 303h0 M114 354h0 M156 126h0 M242 420h0 M410 417h0 M199 242h0 M181 269h0 M320 182h0 M462 349h0 M441 384h0 M130 327h0 M171 143h0 M223 101h0 M130 222h0 M329 138h0 M188 215h0 M224 183h0 M413 143h0 M296 137h0 M296 462h0 M427 352h0 M155 381h0 M298 384h0 M191 350h0 M176 168h0 M418 267h0 M345 392h0 M383 266h0"
+                fill="none" stroke="currentColor" stroke-opacity="0.42" stroke-width="2.6" stroke-linecap="round"/>
+
+          <!-- 中心城区街区 -->
+          <g fill="currentColor">
+            <rect x="214" y="212" width="28" height="24" fill-opacity="0.10"/>
+            <rect x="250" y="212" width="28" height="24" fill-opacity="0.16"/>
+            <rect x="286" y="212" width="28" height="24" fill-opacity="0.22"/>
+            <rect x="322" y="212" width="28" height="24" fill-opacity="0.10"/>
+            <rect x="214" y="244" width="28" height="24" fill-opacity="0.16"/>
+            <rect x="250" y="244" width="28" height="24" fill-opacity="0.26"/>
+            <rect x="286" y="244" width="28" height="24" fill-opacity="0.30"/>
+            <rect x="322" y="244" width="28" height="24" fill-opacity="0.18"/>
+            <rect x="214" y="276" width="28" height="24" fill-opacity="0.12"/>
+            <rect x="250" y="276" width="28" height="24" fill-opacity="0.24"/>
+            <rect x="286" y="276" width="12" height="24" fill-opacity="0.26"/>
+            <rect x="302" y="276" width="12" height="24" fill-opacity="0.18"/>
+            <rect x="322" y="276" width="28" height="24" fill-opacity="0.14"/>
+            <rect x="214" y="308" width="28" height="24" fill-opacity="0.08"/>
+            <rect x="250" y="308" width="28" height="24" fill-opacity="0.14"/>
+            <rect x="286" y="308" width="28" height="24" fill-opacity="0.12"/>
+            <rect x="322" y="308" width="28" height="10" fill-opacity="0.10"/>
+            <!-- 卫星城镇 -->
+            <rect x="392" y="136" width="16" height="12" fill-opacity="0.14"/>
+            <rect x="412" y="136" width="16" height="12" fill-opacity="0.10"/>
+            <rect x="392" y="152" width="16" height="12" fill-opacity="0.10"/>
+            <rect x="412" y="152" width="16" height="12" fill-opacity="0.18"/>
+            <rect x="152" y="366" width="16" height="12" fill-opacity="0.12"/>
+            <rect x="172" y="366" width="16" height="12" fill-opacity="0.16"/>
+            <rect x="152" y="382" width="16" height="12" fill-opacity="0.10"/>
+          </g>
+          <!-- 主干道 -->
+          <g fill="none" stroke="currentColor" stroke-opacity="0.35" stroke-width="1">
+            <path d="M150 272H432"/><path d="M282 150V430"/>
+          </g>
+
+          <!-- 空间网络 -->
+          <g fill="none" stroke="#2f5d8c" stroke-opacity="0.7" stroke-width="1">
+            <path d="M150 170L250 130"/><path d="M250 130L372 118"/><path d="M372 118L448 190"/>
+            <path d="M150 170L190 300"/><path d="M448 190L400 292"/>
+            <path d="M190 300L232 402"/><path d="M400 292L440 380"/>
+            <path d="M232 402L342 430"/><path d="M342 430L440 380"/>
+            <path d="M448 190L440 380"/><path d="M372 118L400 292"/>
+          </g>
+          <!-- 汇入 AI 节点的动态数据流 -->
+          <g class="fig-flow" fill="none" stroke="#2f5d8c" stroke-width="1.4" stroke-linecap="round">
+            <path d="M250 130L282 272"/><path d="M372 118L282 272"/>
+            <path d="M190 300L282 272"/><path d="M400 292L282 272"/>
+            <path d="M232 402L282 272"/><path d="M342 430L282 272"/>
+          </g>
+
+          <!-- 节点 -->
+          <g fill="#f5f4ef" stroke="currentColor" stroke-width="1.2">
+            <circle cx="150" cy="170" r="3.5"/><circle cx="372" cy="118" r="3.5"/>
+            <circle cx="190" cy="300" r="3.5"/><circle cx="342" cy="430" r="3.5"/>
+            <circle cx="440" cy="380" r="3.5"/>
+          </g>
+          <g fill="currentColor">
+            <circle cx="250" cy="130" r="4"/><circle cx="448" cy="190" r="4"/>
+            <circle cx="400" cy="292" r="4"/><circle cx="232" cy="402" r="4"/>
+          </g>
+          <!-- AI 枢纽节点 -->
+          <circle class="fig-pulse" cx="282" cy="272" r="10" fill="none" stroke="#2f5d8c" stroke-width="1"/>
+          <circle class="fig-pulse d2" cx="282" cy="272" r="10" fill="none" stroke="#2f5d8c" stroke-width="1"/>
+          <circle class="fig-pulse d3" cx="282" cy="272" r="10" fill="none" stroke="#2f5d8c" stroke-width="1"/>
+          <circle cx="282" cy="272" r="5.5" fill="#2f5d8c"/>
+          <circle class="fig-blink" cx="425" cy="193" r="1.8" fill="#2f5d8c"/>
+          <circle class="fig-blink d2" cx="160" cy="307" r="1.8" fill="#2f5d8c"/>
+
+          <!-- 标签 -->
+          <g font-family="ui-monospace, 'SF Mono', Menlo, Consolas, monospace" font-size="10" letter-spacing="1" fill="currentColor" fill-opacity="0.8"
+             paint-order="stroke" stroke="#f5f4ef" stroke-width="3" stroke-linejoin="round">
+            <text x="296" y="266">AI</text>
+            <text x="258" y="126">DATA</text>
+            <text x="410" y="288">GIS</text>
+            <text x="222" y="406" text-anchor="end">PLANNING</text>
+            <text x="458" y="186">CITY</text>
+          </g>
+        </svg>
+        <figcaption class="mono">
+          <span>Fig. 01 — Spatial Intelligence</span>
+          <span>AI × Urban Space · Grid / Network / Boundary</span>
+        </figcaption>
+      </figure>
     </div>
-    <h1 class="hero-title reveal" id="heroTitle">李建刚</h1>
-    <p class="hero-role reveal" id="heroRole"></p>
-    <p class="hero-intro reveal" id="heroIntro"></p>
-    <div class="hero-scroll reveal">
-      <div class="mouse"><div class="wheel"></div></div>
+
+    <div class="hero-stats reveal">
+      <div class="hero-stats-inner" id="heroStats"></div>
     </div>
-  </div>
-</header>
+  </header>
 
-<main class="container">
-
-  <!-- 个人简介 -->
-  <section class="section" id="profile">
-    <h2 class="section-title reveal">👤 个人简介</h2>
-    <div class="glass-card card-text reveal" id="profileText"></div>
+  <!-- 02 Research Focus -->
+  <section class="section" id="focus" aria-labelledby="focusTitle">
+    <div class="wrap">
+      <header class="sec-head reveal">
+        <span class="sec-num mono">02</span>
+        <div class="sec-titles">
+          <h2 class="sec-title" id="focusTitle">Research Focus</h2>
+          <p class="sec-zh">研究方向</p>
+        </div>
+        <p class="sec-lead">从城镇化过程与国土空间格局出发，理解城市、生态与人的关系；并将人工智能作为新的研究方法与研究对象引入城乡规划与空间科学。</p>
+      </header>
+      <div class="focus-grid" id="focusGrid"></div>
+    </div>
   </section>
 
-  <!-- 科研项目 -->
-  <section class="section" id="projects">
-    <h2 class="section-title reveal">🧪 科研项目</h2>
-    <div class="project-list" id="projectList"></div>
+  <!-- 03 AI × Planning -->
+  <section class="section band" id="ai" aria-labelledby="aiTitle">
+    <div class="wrap">
+      <header class="sec-head reveal">
+        <span class="sec-num mono">03</span>
+        <div class="sec-titles">
+          <h2 class="sec-title" id="aiTitle">AI × Planning</h2>
+          <p class="sec-zh" id="aiSub"></p>
+        </div>
+        <p class="sec-lead" id="aiStatement"></p>
+      </header>
+      <ol class="flow reveal" id="aiFlow" aria-label="从人工智能到城市的应用链条"></ol>
+      <div class="ai-grid reveal" id="aiDirections"></div>
+    </div>
   </section>
 
-  <!-- 科研兼职 -->
-  <section class="section" id="positions">
-    <h2 class="section-title reveal">🤝 科研兼职</h2>
-    <div class="position-grid" id="positionGrid"></div>
+  <!-- 04 Selected Research -->
+  <section class="section" id="research" aria-labelledby="researchTitle">
+    <div class="wrap">
+      <header class="sec-head reveal">
+        <span class="sec-num mono">04</span>
+        <div class="sec-titles">
+          <h2 class="sec-title" id="researchTitle">Selected Research</h2>
+          <p class="sec-zh">代表性研究</p>
+        </div>
+        <p class="sec-lead">围绕干旱区城市圈的城镇化—生态环境关系、空间结构与生态系统健康展开的代表性成果。</p>
+      </header>
+      <ol class="pubs" id="pubList"></ol>
+      <div class="sec-foot reveal">
+        <a class="link-arrow" href="publications.html">View All Publications <span class="arrow" aria-hidden="true">→</span></a>
+      </div>
+    </div>
   </section>
 
-  <!-- 代表性论文 -->
-  <section class="section" id="papers">
-    <h2 class="section-title reveal">📄 代表性论文</h2>
-    <div class="paper-list" id="paperList"></div>
+  <!-- 05 Research Projects -->
+  <section class="section" id="projects" aria-labelledby="projectsTitle">
+    <div class="wrap">
+      <header class="sec-head reveal">
+        <span class="sec-num mono">05</span>
+        <div class="sec-titles">
+          <h2 class="sec-title" id="projectsTitle">Research Projects</h2>
+          <p class="sec-zh">科研项目</p>
+        </div>
+        <p class="sec-lead">主持国家自然科学基金青年科学基金项目等各级科研与教学研究项目。</p>
+      </header>
+      <div class="proj-featured reveal" id="projFeatured"></div>
+      <div class="proj-grid" id="projGrid"></div>
+      <p class="proj-note reveal" id="projNote"></p>
+    </div>
   </section>
 
-  <!-- 荣誉 -->
-  <section class="section" id="honors">
-    <h2 class="section-title reveal">🏆 荣誉奖项</h2>
-    <div class="honor-grid" id="honorGrid"></div>
+  <!-- 06 Policy Impact -->
+  <section class="section" id="policy" aria-labelledby="policyTitle">
+    <div class="wrap">
+      <header class="sec-head reveal">
+        <span class="sec-num mono">06</span>
+        <div class="sec-titles">
+          <h2 class="sec-title" id="policyTitle">Policy Impact</h2>
+          <p class="sec-zh">政策咨询与社会服务</p>
+        </div>
+        <p class="sec-lead">将研究转化为面向公共政策的建议，并进入政府决策信息渠道。</p>
+      </header>
+      <article class="policy-card reveal" id="policyCard"></article>
+    </div>
   </section>
 
-  <!-- 联系方式 -->
-  <section class="section" id="contact">
-    <h2 class="section-title reveal">✉️ 联系方式</h2>
-    <div class="glass-card contact-card reveal" id="contactCard"></div>
+  <!-- 07 About -->
+  <section class="section" id="about" aria-labelledby="aboutTitle">
+    <div class="wrap">
+      <header class="sec-head reveal">
+        <span class="sec-num mono">07</span>
+        <div class="sec-titles">
+          <h2 class="sec-title" id="aboutTitle">About</h2>
+          <p class="sec-zh">个人简介</p>
+        </div>
+      </header>
+      <div class="two-col reveal">
+        <span class="spacer" aria-hidden="true"></span>
+        <div>
+          <p class="about-text" id="bioShort"></p>
+          <a class="link-arrow" href="profile.html">完整个人学术简历 <span class="arrow" aria-hidden="true">→</span></a>
+        </div>
+        <dl class="about-aside" id="aboutAside"></dl>
+      </div>
+    </div>
   </section>
 
-  <!-- 加入我们 -->
-  <section class="section" id="recruiting">
-    <h2 class="section-title reveal">🚀 加入我们</h2>
-    <div class="recruit-card reveal">
-      <p class="recruit-subtitle" id="recruitSubtitle"></p>
-      <p class="recruit-intro" id="recruitIntro"></p>
-      <div class="recruit-items" id="recruitItems"></div>
-      <p class="recruit-closing" id="recruitClosing"></p>
+  <!-- 08 Academic Service -->
+  <section class="section" id="service" aria-labelledby="serviceTitle">
+    <div class="wrap">
+      <header class="sec-head reveal">
+        <span class="sec-num mono">08</span>
+        <div class="sec-titles">
+          <h2 class="sec-title" id="serviceTitle">Academic Service</h2>
+          <p class="sec-zh">学术兼职</p>
+        </div>
+      </header>
+      <div class="two-col reveal">
+        <span class="spacer" aria-hidden="true"></span>
+        <ol class="service-list" id="serviceList"></ol>
+        <div>
+          <p class="journals-title mono">Peer Review · 期刊审稿</p>
+          <ul class="journals" id="journalList"></ul>
+          <p class="journals-note">等 SSCI / SCI 期刊审稿人</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 09 Join -->
+  <section class="section soft" id="join" aria-labelledby="joinTitle">
+    <div class="wrap">
+      <header class="sec-head reveal">
+        <span class="sec-num mono">09</span>
+        <div class="sec-titles">
+          <h2 class="sec-title" id="joinTitle">Join the Group</h2>
+          <p class="sec-zh">加入课题组</p>
+        </div>
+        <p class="sec-lead" id="joinSubtitle"></p>
+      </header>
+      <div class="join-grid" id="joinItems"></div>
+      <div class="join-focus reveal" id="joinFocus"></div>
+      <div class="join-cta reveal">
+        <p class="join-closing" id="joinClosing"></p>
+        <a class="btn btn-primary" href="join.html">了解课题组 <span class="arrow" aria-hidden="true">→</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 10 Contact -->
+  <section class="section" id="contact" aria-labelledby="contactTitle">
+    <div class="wrap">
+      <header class="sec-head reveal">
+        <span class="sec-num mono">10</span>
+        <div class="sec-titles">
+          <h2 class="sec-title" id="contactTitle">Contact</h2>
+          <p class="sec-zh">联系方式</p>
+        </div>
+      </header>
+      <div class="contact-grid reveal">
+        <span class="spacer" aria-hidden="true"></span>
+        <div>
+          <span class="c-label mono">Email</span>
+          <ul class="c-list" id="contactEmails"></ul>
+        </div>
+        <div>
+          <span class="c-label mono">Office</span>
+          <p class="c-text" id="contactOffice"></p>
+        </div>
+        <div>
+          <span class="c-label mono">Links</span>
+          <ul class="c-links" id="contactLinks"></ul>
+        </div>
+      </div>
     </div>
   </section>
 
 </main>
 
 <footer class="footer">
-  <div class="container">
-    <p id="footerText">李建刚 · 个人主页</p>
+  <div class="wrap footer-grid">
+    <div>
+      <p class="footer-l1" id="footerL1"></p>
+      <p class="footer-l2" id="footerL2"></p>
+    </div>
+    <p class="footer-tag mono" id="footerL3"></p>
+    <p class="footer-copy" id="footerCopy"></p>
   </div>
 </footer>
 
