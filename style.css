@@ -487,7 +487,17 @@ em { font-style: italic; }
 .footer-l1 { font-family: var(--font-serif); color: var(--ink); font-weight: 600; font-size: 17px; }
 .footer-l2 { margin-top: 2px; }
 .footer-tag { font-size: 12px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); }
+.footer-end { display: flex; flex-direction: column; align-items: flex-end; gap: 4px; }
 .footer-copy { font-size: 12.5px; color: var(--faint); }
+.footer-count {
+  display: flex; align-items: baseline; gap: 8px;
+  font-size: 12px; color: var(--faint); font-variant-numeric: tabular-nums;
+}
+/* 统计服务不可用时整行隐藏（类选择器的 display 会盖掉浏览器默认的 [hidden]，必须显式声明） */
+.footer-count[hidden] { display: none; }
+.footer-count .fc-label { margin-right: 5px; }
+.footer-count .fc-num { color: var(--muted); font-weight: 500; }
+.footer-count .fc-sep { color: var(--line-2); }
 
 /* ---------- 子页面 ---------- */
 .page-head { padding: calc(var(--nav-h) + 72px) 0 56px; border-bottom: 1px solid var(--line); }
@@ -608,6 +618,7 @@ em { font-style: italic; }
   .join-cta { flex-direction: column; align-items: flex-start; }
 
   .footer-grid { grid-template-columns: 1fr; gap: 12px; }
+  .footer-end { align-items: flex-start; }
 
   .cv-row { grid-template-columns: 1fr; gap: 6px; }
 }

@@ -22,6 +22,7 @@
 //   service              学术兼职：roles 为职务，journals 为审稿期刊
 //   recruiting           加入课题组
 //   contact / links      联系方式与外部链接（没有真实链接的账号不要填）
+//   counter              页脚访客统计（第三方服务「不蒜子」，enabled: false 可完全关闭）
 // ============================================================
 
 const PROFILE_DATA = {
@@ -350,6 +351,20 @@ const PROFILE_DATA = {
   links: [
     { label: "GitHub", url: "https://github.com/ljiangang412-ai" }
   ],
+
+  // 访客统计（第三方服务「不蒜子」，GitHub Pages 是纯静态的，自身无法计数）
+  //   enabled  : false 即完全关闭，连脚本都不会加载
+  //   provider : "ibruce"（原版 busuanzi.ibruce.info）或 "busuanzi.cc"（CoolCat 的另一套实现）
+  //              两家是各自独立的服务，数据不互通，换一家等于从 0 重新计数
+  //   数字加载失败时页脚这一行会自动隐藏，不会显示 0 或空白
+  counter: {
+    enabled: true,
+    provider: "ibruce",
+    showUv: true,
+    showPv: true,
+    labelUv: "访客",
+    labelPv: "访问"
+  },
 
   footer: {
     line1: "李建刚 · Academic Homepage",

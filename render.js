@@ -128,6 +128,76 @@
   setText("footerL3", F.line3 || "");
   setText("footerCopy", "© " + new Date().getFullYear() + " " + (D.nameEn || D.name));
 
+  // ---------- 访客统计 ----------
+  // GitHub Pages 是纯静态托管，自身无法计数，这里接入第三方服务「不蒜子」。
+  // 两家实现的元素 ID 规则不同，下面各写一套；在 data.js 的 counter.provider 中切换。
+  var COUNTERS = {
+    // 原版（Bruce / ibruce.info），需要 container + value 两层结构
+    "ibruce": {
+      src: "//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js",
+      valueId: function (k) { return "busuanzi_value_site_" + k; },
+      item: function (k, label) {
+        return '<span class="fc-item" id="busuanzi_container_site_' + k + '">' +
+               '<span class="fc-label">' + esc(label) + "</span>" +
+               '<span class="fc-num" id="busuanzi_value_site_' + k + '">–</span></span>';
+      }
+    },
+    // CoolCat 的另一套实现（busuanzi.cc），单层结构
+    "busuanzi.cc": {
+      src: "//cdn.busuanzi.cc/busuanzi/3.6.9/busuanzi.min.js",
+      valueId: function (k) { return "busuanzi_site_" + k; },
+      item: function (k, label) {
+        return '<span class="fc-item">' +
+               '<span class="fc-label">' + esc(label) + "</span>" +
+               '<span class="fc-num" id="busuanzi_site_' + k + '">–</span></span>';
+      }
+    }
+  };
+
+  function renderCounter() {
+    var box = $("footerCount");
+    var C = D.counter;
+    if (!box || !C || !C.enabled) return;
+    var P = COUNTERS[C.provider] || COUNTERS.ibruce;
+
+    var parts = [], watch = [];
+    if (C.showUv !== false) { parts.push(P.item("uv", C.labelUv || "访客")); watch.push(P.valueId("uv")); }
+    if (C.showPv !== false) { parts.push(P.item("pv", C.labelPv || "访问")); watch.push(P.valueId("pv")); }
+    if (!parts.length) return;
+
+    box.innerHTML = parts.join('<span class="fc-sep" aria-hidden="true">·</span>');
+    box.setAttribute("title", "由第三方服务「不蒜子」统计，自本站启用该功能之日起累计");
+
+    var src = P.src;
+    if (location.protocol === "file:") src = "https:" + src;   // 本地双击打开时补上协议
+    var sc = document.createElement("script");
+    sc.async = true;
+    sc.src = src;
+    document.body.appendChild(sc);
+
+    // 只有真的取到数字才显示这一行；服务不可用时整行保持隐藏，不会露出 0 或空白
+    var tries = 0;
+    var timer = setInterval(function () {
+      tries++;
+      var ready = watch.length > 0 && watch.every(function (id) {
+        var el = document.getElementById(id);
+        return el && /\d/.test(el.textContent);
+      });
+      if (ready) {
+        clearInterval(timer);
+        watch.forEach(function (id) {
+          var el = document.getElementById(id);
+          var n = parseInt(String(el.textContent).replace(/[^\d]/g, ""), 10);
+          if (!isNaN(n)) el.textContent = n.toLocaleString("en-US");
+        });
+        box.hidden = false;
+      } else if (tries > 50) {
+        clearInterval(timer);   // 约 10 秒仍无数据，放弃
+      }
+    }, 200);
+  }
+  renderCounter();
+
   // ---------- 首页 ----------
   if (page === "home") {
     document.title = D.name + " · Academic Homepage｜" + D.core.title + " · " + D.focus[0].title;
