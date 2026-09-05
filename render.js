@@ -151,6 +151,17 @@
                '<span class="fc-label">' + esc(label) + "</span>" +
                '<span class="fc-num" id="busuanzi_site_' + k + '">–</span></span>';
       }
+    },
+    // Vercount（vercount.one）：兼容不蒜子的替代服务，国内外访问都稳定，单层结构
+    "vercount": {
+      src: "https://events.vercount.one/js",
+      name: "Vercount",
+      valueId: function (k) { return "vercount_value_site_" + k; },
+      item: function (k, label) {
+        return '<span class="fc-item">' +
+               '<span class="fc-label">' + esc(label) + "</span>" +
+               '<span class="fc-num" id="vercount_value_site_' + k + '">–</span></span>';
+      }
     }
   };
 
@@ -166,7 +177,7 @@
     if (!parts.length) return;
 
     box.innerHTML = parts.join('<span class="fc-sep" aria-hidden="true">·</span>');
-    box.setAttribute("title", "由第三方服务「不蒜子」统计，自本站启用该功能之日起累计");
+    box.setAttribute("title", "由第三方服务「" + (P.name || "不蒜子") + "」统计，自本站启用该功能之日起累计");
 
     var src = P.src;
     if (location.protocol === "file:") src = "https:" + src;   // 本地双击打开时补上协议
