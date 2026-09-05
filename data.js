@@ -359,7 +359,7 @@ const PROFILE_DATA = {
   //   数字加载失败时页脚这一行会自动隐藏，不会显示 0 或空白
   counter: {
     enabled: true,
-    provider: "ibruce",
+    provider: "vercount",   // 可选："vercount"（推荐，稳定）/ "ibruce"（不蒜子原版）/ "busuanzi.cc"
     showUv: true,
     showPv: true,
     labelUv: "访客",
